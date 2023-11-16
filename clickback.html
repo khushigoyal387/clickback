@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clickback</title>
+    <link rel="stylesheet" href="clickback.css">
+</head>
+<style>
+    body{
+        display: flex;
+    }
+</style>
+<body>
+    <div id="wrapper">
+        <div class="box">
+            <p class="color">Red</p>
+            <p class="color">Green</p>
+            <p class="color">Blue</p>
+            <p class="color">Yellow</p>
+            <p class="color">Purple</p>
+            <p class="color">Antiquewhite</p>
+            <p class="color">Bluevoilet</p>
+        </div>
+    </div>
+    <script>
+        let fn=document.querySelectorAll(".color")
+        let ln=document.querySelector("body")
+      
+        for(let i=0;i<fn.length;i++)
+        {
+            fn[i].onclick=()=>{
+                ln.style.backgroundColor = fn[i].innerHTML
+            }
+        }
+    </script>
+</body>
+</html>
